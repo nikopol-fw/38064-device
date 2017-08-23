@@ -1,0 +1,25 @@
+body {
+  color: #464646;
+  font: normal 15px/30px 'Open Sans', 'Arial', sans-serif;
+}
+
+.slider-item-title,
+.services-list h3,
+.main-about-us h2,
+.main-contacts h2,
+.page-title {
+  color: #000000;
+  font-size: 47px;
+  font-weight: 700;
+  font-family: 'Gilroy', 'Arial', sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.category-products-list h3,
+.catalog-inner-list h4 {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'Gilroy', 'Arial', sans-serif;
+  letter-spacing: 0.01em;
+}

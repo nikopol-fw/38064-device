@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Девайс</title>
+  <title>Девайс — Моноподы для селфи</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -50,7 +50,8 @@
     </ul>
 
     <form class="header-search" action="https://echo.htmlacademy.ru/" method="get">
-      <input type="text" name="site-search" placeholder="Поиск по сайту">
+      <label class="visually-hidden" for="site-search">Поиск по сайту</label>
+      <input type="text" id="site-search" name="site-search" placeholder="Поиск по сайту">
       <button class="btn-search" type="submit">Найти</button>
     </form>
   </header>
@@ -126,14 +127,14 @@
       <h3>Сортировка:</h3>
 
       <ul class="sorting-list">
-        <li><a>По&nbsp;цене</a></li>
-        <li><a>По&nbsp;типу</a></li>
-        <li><a>По&nbsp;популярности</a></li>
+        <li><a href="">По&nbsp;цене</a></li>
+        <li><a href="">По&nbsp;типу</a></li>
+        <li><a href="">По&nbsp;популярности</a></li>
       </ul>
 
       <ul class="sorting-direction">
-        <li><a>По&nbsp;убыванию</a></li>
-        <li class="sorting-direction-current"><a>По&nbsp;возрастанию</a></li>
+        <li><a href="">По&nbsp;убыванию</a></li>
+        <li class="sorting-direction-current"><a href="">По&nbsp;возрастанию</a></li>
       </ul>
     </section>
 
@@ -142,44 +143,52 @@
 
       <ul class="catalog-inner-list">
         <li>
-          <h4><a href="catalog-item.html">Любительская селфи-палка</a></h4>
-          <p class="catalog-inner-image">
-            <a href="catalog-item.html" title="Перейти на страницу товара"><img src="img/ljubitel'skaja-selfi-palka_catalog.jpg" alt="Любительская селфи-палка" width="360" height="380"></a>
-          </p>
+          <a href="catalog-item.html" title="Перейти на страницу товара">
+            <h4>Любительская селфи-палка</h4>
+            <p class="catalog-inner-image">
+              <img src="img/ljubitel'skaja-selfi-palka_catalog.jpg" alt="Любительская селфи-палка" width="360" height="380">
+            </p>
+          </a>
           <p class="catalog-inner-price">500&nbsp;руб.</p>
         </li>
         <li>
-          <h4><a href="catalog-item.html">Профессиональная селфи-палка</a></h4>
-          <p class="catalog-inner-image">
-            <a href="catalog-item.html" title="Перейти на страницу товара"><img src="img/professional'naja-selfi-palka_catalog.jpg" alt="Профессиональная селфи-палка" width="360" height="380"></a>
-          </p>
+          <a href="catalog-item.html" title="Перейти на страницу товара">
+            <h4>Профессиональная селфи-палка</h4>
+            <p class="catalog-inner-image">
+              <img src="img/professional'naja-selfi-palka_catalog.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
+            </p>
+          </a>
           <p class="catalog-inner-price">1&nbsp;500&nbsp;руб.</p>
         </li>
         <li>
-          <h4><a href="catalog-item.html">Непотопляемая селфи-палка</a></h4>
-          <p class="catalog-inner-image">
-            <a href="catalog-item.html" title="Перейти на страницу товара"><img src="img/nepotopljaemaja-selfi-palka_catalog.jpg" alt="Непотопляемая селфи-палка" width="360" height="380"></a>
-          </p>
+          <a href="catalog-item.html" title="Перейти на страницу товара">
+            <h4>Непотопляемая селфи-палка</h4>
+            <p class="catalog-inner-image">
+              <img src="img/nepotopljaemaja-selfi-palka_catalog.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
+            </p>
+          </a>
           <p class="catalog-inner-price">2&nbsp;500&nbsp;руб.</p>
         </li>
         <li>
-          <h4><a href="catalog-item.html">Селфи-палка &laquo;Следуй за&nbsp;мной&raquo;</a></h4>
-          <p class="catalog-inner-image">
-            <a href="catalog-item.html" title="Перейти на страницу товара"><img src="img/selfi-palka-Sleduj-za-mnoj_catalog.jpg" alt="Селфи-палка «Следуй за мной»" width="360" height="380"></a>
-            <span class="catalog-item-label">New</span>
-          </p>
+          <a href="catalog-item.html" title="Перейти на страницу товара">
+            <h4>Селфи-палка &laquo;Следуй за&nbsp;мной&raquo;</h4>
+            <p class="catalog-inner-image">
+              <img src="img/selfi-palka-Sleduj-za-mnoj_catalog.jpg" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
+              <span class="catalog-item-label">New</span>
+            </p>
+          </a>
           <p class="catalog-inner-price">4&nbsp;900&nbsp;руб.</p>
         </li>
       </ul>
 
       <div class="catalog-inner-pagination">
-        <button class="inner-pagination-back-link" type="button">Назад</button>
+        <li><a href="#">Назад</a>
         <ul class="inner-pagination-list">
           <li class="inner-pagination-list-current"><a>1</a></li>
           <li><a href="#">2</a></li>
           <li><a href="#">3</a></li>
         </ul>
-        <button class="inner-pagination-forward-link" type="button">Вперед</button>
+        <li><a href="#">Вперед</a>
       </div>
     </section>
   </main>
@@ -213,15 +222,16 @@
 
     <ul class="footer-social-list">
       <li class="facebook-link">
-        <a href="#">Фейсбук</a>
+        <a href="#"><span class="visually-hidden">Фейсбук</span></a>
       </li>
       <li class="instagram-link">
-        <a href="#">Инстаграм</a>
+        <a href="#"><span class="visually-hidden">Инстаграм</span></a>
       </li>
       <li class="twitter-link">
-        <a href="#">Твитер</a>
+        <a href="#"><span class="visually-hidden">Твитер</span></a>
       </li>
     </ul>
+
     <p class="footer-copyright">
       <a href="https://htmlacademy.ru/intensive/htmlcss" title="Перейти на страницу — Интенсивный онлайн‑курс
 «Базовый HTML и CSS» HTML Academy"><img src="img/logo-html.svg" alt="Логотип HTML Academy" width="27" height="35"></a>

@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>Девайс</title>
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
 </head>
 <body>
   <header class="main-header">
@@ -49,8 +51,7 @@
 
     <form class="header-search" action="https://echo.htmlacademy.ru/" method="get">
       <label class="visually-hidden" for="site-search">Поиск по сайту</label>
-      <input type="text" id="site-search" name="site-search" placeholder="Поиск по сайту">
-      <button class="btn-search" type="submit">Найти</button>
+      <input type="text" id="site-search" name="site-search" placeholder="Поиск по сайту"><button class="btn-search" type="submit"><span>Найти</span></button>
     </form>
   </header>
 
@@ -77,7 +78,7 @@
           </a>
         </p>
         <p class="slider-item-text">Самая длинная палка для селфи доступна в&nbsp;нашем магазине.<br>Восемь (Восемь, Карл!) метров длиной и&nbsp;весом всего 5&nbsp;килограмм.</p>
-        <p><a class="btn" href="catalog-item.html">Подробнее</a></p>
+        <p><a class="button" href="catalog-item.html"><span>Подробнее</span></a></p>
         <table>
           <tr>
             <td>Длина палки</td>
@@ -104,7 +105,7 @@
           </a>
         </p>
         <p class="slider-item-text">Мотивирующие фитнес-браслеты помогут найти в&nbsp;себе силы не&nbsp;пропускать занятия и&nbsp;соблюдать диету.</p>
-        <p><a class="btn" href="catalog-item.html">Подробнее</a></p>
+        <p><a class="button" href="catalog-item.html"><span>Подробнее</span></a></p>
         <table>
           <tr>
             <td>Без подзарядки</td>
@@ -123,7 +124,7 @@
           </a>
         </p>
         <p class="slider-item-text">Этот обычный, на&nbsp;первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-        <p><a class="btn" href="catalog-item.html">Подробнее</a></p>
+        <p><a class="button" href="catalog-item.html"><span>Подробнее</span></a></p>
         <table>
           <tr>
             <td>Дальность полета</td>
@@ -184,7 +185,7 @@
       <h2 class="visually-hidden">Наши услуги</h2>
 
       <ul class="services-list-anchor">
-        <li><a href="#services-list-delivery">Доставка</a></li>
+        <li class="services-list-anchor-current"><a href="#services-list-delivery">Доставка</a></li>
         <li><a href="#services-list-guarantee">Гарантия</a></li>
         <li><a href="#services-list-credit">Кредит</a></li>
       </ul>
@@ -192,17 +193,17 @@
       <ul class="services-list">
         <li class="services-list-current" id="services-list-delivery">
           <h3>Доставка</h3>
-          <div class="services-list-image-delivery"></div>
+          <div class="services-list-image image-delivery"></div>
           <p>Мы&nbsp;с&nbsp;удовольствием доставим ваш товар прямо к&nbsp;вашему подъезду совершенно бесплатно! Ведь мы&nbsp;неплохо заработаем, поднимая его на&nbsp;ваш этаж.</p>
         </li>
         <li id="services-list-guarantee">
           <h3>Гарантия</h3>
-          <div class="services-list-image-guarantee"></div>
+          <div class="services-list-image image-guarantee"></div>
           <p>Если из-за возгорания купленного у&nbsp;нас товара у&nbsp;вас сгорит дом&nbsp;&mdash; не&nbsp;переживайте, мы&nbsp;выдадим вам новый. Товар, не&nbsp;дом, конечно&nbsp;же.</p>
         </li>
         <li id="services-list-credit">
           <h3>Кредит</h3>
-          <div class="services-list-image-credit"></div>
+          <div class="services-list-image image-credit"></div>
           <p>Залезть в&nbsp;долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
         </li>
       </ul>
@@ -211,24 +212,45 @@
     <section class="brands">
       <h2 class="visually-hidden">Бренды в нашем магазине</h2>
 
+      <svg class="visually-hidden" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="filtersPicture">
+            <feComposite in="SourceGraphic" in2="SourceGraphic" operator="arithmetic" k1="0" k2="1" k3="0" k4="0" />
+            <feColorMatrix type="saturate" values="0" />
+          </filter>
+        </defs>
+      </svg>
+
       <ul class="brands-list">
-        <li>
-          <a href="https://www.dji.com/" title="Перейти на сайт DJI в отдельной вкладке" target="_blank"><img src="img/brand-dji.png" alt="DJI" width="260" height="100">
+        <li class="brand-dji">
+          <a href="https://www.dji.com/" title="Перейти на сайт DJI в отдельной вкладке" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 100" width="260" height="100">
+              <image filter="url(&quot;#filtersPicture&quot;)" x="0" y="0" width="260" height="100" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/brand-dji.png" />
+            </svg>
             <span class="visually-hidden">dji.com</span>
           </a>
         </li>
-        <li>
-          <a href="http://www.sp-gadgets.com/" title="Перейти на сайт SP Gadgets в отдельной вкладке" target="_blank"><img src="img/brand-sp-gadgets.png" alt="SP Gadgets" width="260" height="100">
+        <li class="brand-sp-gadgets">
+          <a href="http://www.sp-gadgets.com/" title="Перейти на сайт SP Gadgets в отдельной вкладке" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 100" width="260" height="100">
+              <image filter="url(&quot;#filtersPicture&quot;)" x="0" y="0" width="260" height="100" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/brand-sp-gadgets.png" />
+            </svg>
             <span class="visually-hidden">sp-gadgets.com</span>
           </a>
         </li>
-        <li>
-          <a href="https://ru.gopro.com/" title="Перейти на сайт GoPro в отдельной вкладке" target="_blank"><img src="img/brand-go-pro.png" alt="GoPro" width="260" height="100">
+        <li class="brand-go-pro">
+          <a href="https://ru.gopro.com/" title="Перейти на сайт GoPro в отдельной вкладке" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 100" width="260" height="100">
+              <image filter="url(&quot;#filtersPicture&quot;)" x="0" y="0" width="260" height="100" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/brand-go-pro.png" />
+            </svg>
             <span class="visually-hidden">gopro.com</span>
           </a>
         </li>
-        <li>
-          <a href="https://www.vive.com/" title="Перейти на сайт VIVE в отдельной вкладке" target="_blank"><img src="img/brand-vive.png" alt="VIVE" width="260" height="100">
+        <li class="brand-vive">
+          <a href="https://www.vive.com/" title="Перейти на сайт VIVE в отдельной вкладке" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 100" width="260" height="100">
+              <image filter="url(&quot;#filtersPicture&quot;)" x="0" y="0" width="260" height="100" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/brand-vive.png" />
+            </svg>
             <span class="visually-hidden">vive.com</span>
           </a>
         </li>
@@ -241,11 +263,11 @@
       <p>Огромный выбор гаджетов не&nbsp;оставит равнодушным гика, который есть в&nbsp;каждом из&nbsp;нас.</p>
       <p>Мы&nbsp;можем доставить ваш товар в&nbsp;самые отдаленные точки России! DEVICE работает со&nbsp;многими транспортными компаниями:</p>
       <ul>
-        <li>Деловые Линии</li>
-        <li>Автотрейдинг</li>
-        <li>ЖелДорЭкспедиция</li>
+        <li><strong>Деловые Линии</strong></li>
+        <li><strong>Автотрейдинг</strong></li>
+        <li><strong>ЖелДорЭкспедиция</strong></li>
       </ul>
-      <p><a class="btn" href="about-us.html">Подробнее о&nbsp;нас</a></p>
+      <p><a class="button" href="about-us.html">Подробнее о&nbsp;нас</a></p>
     </section>
 
     <section class="main-contacts">
@@ -255,8 +277,7 @@
       <p class="main-contacts-map">
         <iframe src="img/map-main.jpg" width="560" height="222"></iframe>
       </p>
-      <p><a class="btn" href="send-message.html">Напишите нам</a></p>
-      <button class="modal-close" type="button">Закрыть окно</button>
+      <p><a class="button" href="send-message.html">Напишите нам</a></p>
     </section>
 
     <section class="modal message-modal">
@@ -273,17 +294,19 @@
           <label>Текст письма:<br><textarea rows="6" placeholder="В свободной форме" name="message-modal-text" maxlength="25000" required></textarea></label>
         </p>
         <p class="message-modal-btn">
-          <button class="btn" type="submit">Отправить</button>
+          <button class="button" type="submit">Отправить</button>
         </p>
       </form>
 
-      <button class="modal-close" type="button">Закрыть окно</button>
+      <button class="modal-close" type="button"><span class="visually-hidden">Закрыть окно</span></button>
     </section>
 
     <section class="modal map-modal">
       <h2 class="visually-hidden">Мы&nbsp;на&nbsp;карте</h2>
 
       <iframe src="img/map-modal.jpg" width="960" height="559"></iframe>
+
+      <button class="modal-close" type="button"><span class="visually-hidden">Закрыть окно</span></button>
     </section>
   </main>
 
@@ -316,13 +339,13 @@
 
     <ul class="footer-social-list">
       <li class="facebook-link">
-        <a href="#"><span class="visually-hidden">Фейсбук</span></a>
+        <a href="#" title="Перейти в отдельной вкладке на нашу страницу в Фейсбук" target="_blank"><span class="visually-hidden">Фейсбук</span></a>
       </li>
       <li class="instagram-link">
-        <a href="#"><span class="visually-hidden">Инстаграм</span></a>
+        <a href="#" title="Перейти в отдельной вкладке на нашу страницу в Инстаграм" target="_blank"><span class="visually-hidden">Инстаграм</span></a>
       </li>
       <li class="twitter-link">
-        <a href="#"><span class="visually-hidden">Твитер</span></a>
+        <a href="#" title="Перейти в отдельной вкладке на нашу страницу в Твиттер" target="_blank"><span class="visually-hidden">Твитер</span></a>
       </li>
     </ul>
     <p class="footer-copyright">

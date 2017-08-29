@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>Девайс — Моноподы для селфи</title>
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
 </head>
 <body>
   <header class="main-header">
@@ -51,8 +53,7 @@
 
     <form class="header-search" action="https://echo.htmlacademy.ru/" method="get">
       <label class="visually-hidden" for="site-search">Поиск по сайту</label>
-      <input type="text" id="site-search" name="site-search" placeholder="Поиск по сайту">
-      <button class="btn-search" type="submit">Найти</button>
+      <input type="text" id="site-search" name="site-search" placeholder="Поиск по сайту"><button class="btn-search" type="submit">Найти</button>
     </form>
   </header>
 
@@ -73,10 +74,12 @@
       <h3>Фильтр:</h3>
 
       <form method="get" action="https://echo.htmlacademy.ru">
-        <fieldset>
+        <fieldset class="filters-price">
           <legend>Стоимость</legend>
-          <label for="filters-prices-from">от&nbsp;0<input type="number" min="0" max="5000" id="filters-prices-from"></label>
-          <label for="filters-prices-to">до&nbsp;5000<input type="number" min="0" max="5000" id="filters-prices-to"></label>
+          <label for="filters-prices-from">от&nbsp;0</label>
+          <input type="number" min="0" max="5000" id="filters-prices-from">
+          <label for="filters-prices-to">до&nbsp;5000</label>
+          <input type="number" min="0" max="5000" id="filters-prices-to">
         </fieldset>
 
         <fieldset>
@@ -109,17 +112,17 @@
         <legend>Bluetooth</legend>
           <ul class="filters-bluetooth">
             <li>
-              <input type="radio" name="filters-bluetooth" id="filters-bluetooth-true" value="true">
+              <input class="visually-hidden" type="radio" name="filters-bluetooth" id="filters-bluetooth-true" value="true">
               <label for="filters-bluetooth-true">Есть</label>
             </li>
             <li>
-              <input type="radio" name="filters-bluetooth" id="filters-bluetooth-false" value="false">
+              <input class="visually-hidden" type="radio" name="filters-bluetooth" id="filters-bluetooth-false" value="false">
               <label for="filters-bluetooth-false">Нет</label>
             </li>
           </ul>
         </fieldset>
 
-        <button class="btn" type="submit">Показать</button>
+        <button class="button" type="submit">Показать</button>
       </form>
     </section>
 
@@ -127,14 +130,14 @@
       <h3>Сортировка:</h3>
 
       <ul class="sorting-list">
-        <li><a href="">По&nbsp;цене</a></li>
+        <li class="sorting-list-current"><a href="">По&nbsp;цене</a></li>
         <li><a href="">По&nbsp;типу</a></li>
         <li><a href="">По&nbsp;популярности</a></li>
       </ul>
 
       <ul class="sorting-direction">
-        <li><a href="">По&nbsp;убыванию</a></li>
-        <li class="sorting-direction-current"><a href="">По&nbsp;возрастанию</a></li>
+        <li><a href=""><span class="visually-hidden">По&nbsp;убыванию</span></a></li>
+        <li class="sorting-direction-current"><a href=""><span class="visually-hidden">По&nbsp;возрастанию</span></a></li>
       </ul>
     </section>
 
@@ -150,6 +153,8 @@
             </p>
           </a>
           <p class="catalog-inner-price">500&nbsp;руб.</p>
+          <button class="btn-card button" type="button">В корзину</button>
+          <button class="btn-compare" type="button">Добавить к сравнению</button>
         </li>
         <li>
           <a href="catalog-item.html" title="Перейти на страницу товара">
@@ -159,6 +164,8 @@
             </p>
           </a>
           <p class="catalog-inner-price">1&nbsp;500&nbsp;руб.</p>
+          <button class="btn-card button" type="button">В корзину</button>
+          <button class="btn-compare" type="button">Добавить к сравнению</button>
         </li>
         <li>
           <a href="catalog-item.html" title="Перейти на страницу товара">
@@ -168,6 +175,8 @@
             </p>
           </a>
           <p class="catalog-inner-price">2&nbsp;500&nbsp;руб.</p>
+          <button class="btn-card button" type="button">В корзину</button>
+          <button class="btn-compare" type="button">Добавить к сравнению</button>
         </li>
         <li>
           <a href="catalog-item.html" title="Перейти на страницу товара">
@@ -178,17 +187,19 @@
             </p>
           </a>
           <p class="catalog-inner-price">4&nbsp;900&nbsp;руб.</p>
+          <button class="btn-card button" type="button">В корзину</button>
+          <button class="btn-compare" type="button">Добавить к сравнению</button>
         </li>
       </ul>
 
       <div class="catalog-inner-pagination">
-        <li><a href="#">Назад</a>
+        <a class="pagination-forwback-link" href="#"><span>Назад</span></a>
         <ul class="inner-pagination-list">
           <li class="inner-pagination-list-current"><a>1</a></li>
           <li><a href="#">2</a></li>
           <li><a href="#">3</a></li>
         </ul>
-        <li><a href="#">Вперед</a>
+        <a class="pagination-forwback-link" href="#"><span>Вперед</span></a>
       </div>
     </section>
   </main>
@@ -222,13 +233,13 @@
 
     <ul class="footer-social-list">
       <li class="facebook-link">
-        <a href="#"><span class="visually-hidden">Фейсбук</span></a>
+        <a href="#" title="Перейти в отдельной вкладке на нашу страницу в Фейсбук" target="_blank"><span class="visually-hidden">Фейсбук</span></a>
       </li>
       <li class="instagram-link">
-        <a href="#"><span class="visually-hidden">Инстаграм</span></a>
+        <a href="#" title="Перейти в отдельной вкладке на нашу страницу в Инстаграм" target="_blank"><span class="visually-hidden">Инстаграм</span></a>
       </li>
       <li class="twitter-link">
-        <a href="#"><span class="visually-hidden">Твитер</span></a>
+        <a href="#" title="Перейти в отдельной вкладке на нашу страницу в Твиттер" target="_blank"><span class="visually-hidden">Твитер</span></a>
       </li>
     </ul>
 

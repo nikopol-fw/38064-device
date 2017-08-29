@@ -159,11 +159,11 @@ ul {
 
 .header-search input[type=text] + .btn-search {
   display: inline-block;
-  visibility: hidden;
+  /*visibility: hidden;*/
 }
 
 .header-search input[type=text]:focus + .btn-search {
-  visibility: visible;
+  /*visibility: visible;*/
 }
 
 .header-search input::-webkit-input-placeholder {

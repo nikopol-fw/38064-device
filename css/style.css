@@ -1115,8 +1115,11 @@ main {
 }
 
 
-.sorting-list {
+.sorting {
   position: relative;
+}
+
+.sorting-list {
   display: table-cell;
   margin: 0;
   list-style: none;

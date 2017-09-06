@@ -39,14 +39,14 @@
 
       <div class="main-header-row-top">
         <ul class="user-navigation">
-          <li class="profile-link hidden" hidden>
+          <li class="profile-link">
             <a href="profile.html">Валентин Петухов</a>
           </li>
-          <li class="login-link">
-            <a href="login.html">Войти</a>
-          </li>
-          <li class="logout-link hidden" hidden>
+          <li class="logout-link">
             <a href="logout.html">Выйти</a>
+          </li>
+          <li class="login-link hidden" hidden>
+            <a href="login.html">Войти</a>
           </li>
           <li class="compare-link">
             <a href="compare.html">Сравнить</a>
@@ -89,15 +89,23 @@
         <form method="get" action="https://echo.htmlacademy.ru">
           <fieldset class="filters-price">
             <legend>Стоимость</legend>
-            <label for="filters-prices-from">от&nbsp;0</label>
-            <input type="number" min="0" max="5000" id="filters-prices-from">
-            <label for="filters-prices-to">до&nbsp;5000</label>
-            <input type="number" min="0" max="5000" id="filters-prices-to">
+            <label class="range-filters-label label-min" for="filters-prices-from" style="left: 0">от&nbsp;0</label>
+            <input class="visually-hidden" type="number" min="0" max="5000" id="filters-prices-from">
+            <label class="range-filters-label label-max" for="filters-prices-to" style="left: 60%">до&nbsp;5000</label>
+            <input class="visually-hidden" type="number" min="0" max="5000" id="filters-prices-to">
+
+            <div class="range-filters">
+              <div class="scale">
+                <div class="bar" style="left: 0; width: 60%;"></div>
+              </div>
+              <div class="toogle toggle-min" style="left: 0"></div>
+              <div class="toogle toggle-max" style="left: 60%"></div>
+            </div>
           </fieldset>
 
-        <fieldset>
+        <fieldset class="filters-color">
           <legend>Цвет</legend>
-          <ul class="filters-color">
+          <ul>
             <li>
               <input class="visually-hidden" type="checkbox" name="filters-color-black" id="filters-color-black">
               <label for="filters-color-black">Черный</label>
@@ -121,9 +129,9 @@
           </ul>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="filters-bluetooth">
           <legend>Bluetooth</legend>
-          <ul class="filters-bluetooth">
+          <ul>
             <li>
               <input class="visually-hidden" type="radio" name="filters-bluetooth" id="filters-bluetooth-true" value="true">
               <label for="filters-bluetooth-true">Есть</label>
@@ -146,14 +154,14 @@
         <h3>Сортировка:</h3>
 
         <ul class="sorting-list">
-          <li class="sorting-list-current"><a href="">По&nbsp;цене</a></li>
+          <li class="sorting-list-current"><a>По&nbsp;цене</a></li>
           <li><a href="">По&nbsp;типу</a></li>
           <li><a href="">По&nbsp;популярности</a></li>
         </ul>
 
         <ul class="sorting-direction">
-          <li><a href=""><span class="visually-hidden">По&nbsp;убыванию</span></a></li>
-          <li class="sorting-direction-current"><a href=""><span class="visually-hidden">По&nbsp;возрастанию</span></a></li>
+          <li class="direction-dir direction-dir-up"><a href=""><span class="visually-hidden">По&nbsp;убыванию</span></a></li>
+          <li class="direction-dir direction-dir-down direction-current"><a href=""><span class="visually-hidden">По&nbsp;возрастанию</span></a></li>
         </ul>
       </section>
 
@@ -162,49 +170,88 @@
 
       <ul class="catalog-inner-list">
         <li>
-          <a href="catalog-item.html" title="Перейти на страницу товара">
+          <a class="catalog-inner-header" href="catalog-item.html" title="Перейти на страницу товара">
             <h4>Любительская селфи-палка</h4>
-            <p class="catalog-inner-image">
-              <img src="img/ljubitel'skaja-selfi-palka_catalog.jpg" alt="Любительская селфи-палка" width="360" height="380">
-            </p>
           </a>
+
+          <div class="catalog-inner-image-wrapper" tabindex="0">
+            <p class="catalog-inner-image">
+              <a class="catalog-inner-header" href="catalog-item.html" title="Перейти на страницу товара">
+                <img src="img/ljubitel'skaja-selfi-palka_catalog.jpg" alt="Любительская селфи-палка" width="360" height="380">
+              </a>
+            </p>
+
+            <div class="catalog-inner-wrapper-button">
+              <button class="btn-card button" type="button"><span>В корзину</span></button>
+              <button class="btn-compare" type="button">Добавить к сравнению</button>
+            </div>
+          </div>
+
           <p class="catalog-inner-price">500&nbsp;руб.</p>
-          <button class="btn-card button" type="button"><span>В корзину</span></button>
-          <button class="btn-compare" type="button">Добавить к сравнению</button>
         </li>
+
         <li>
-          <a href="catalog-item.html" title="Перейти на страницу товара">
+          <a class="catalog-inner-header" href="catalog-item.html" title="Перейти на страницу товара">
             <h4>Профессиональная селфи-палка</h4>
+          </a>
+
+          <div class="catalog-inner-image-wrapper" tabindex="0">
             <p class="catalog-inner-image">
+              <a class="catalog-inner-header" href="catalog-item.html" title="Перейти на страницу товара">
               <img src="img/professional'naja-selfi-palka_catalog.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
+              </a>
             </p>
-          </a>
+
+            <div class="catalog-inner-wrapper-button">
+              <button class="btn-card button" type="button"><span>В корзину</span></button>
+              <button class="btn-compare" type="button">Добавить к сравнению</button>
+            </div>
+          </div>
+
           <p class="catalog-inner-price">1&nbsp;500&nbsp;руб.</p>
-          <button class="btn-card button" type="button"><span>В корзину</span></button>
-          <button class="btn-compare" type="button">Добавить к сравнению</button>
         </li>
+
         <li>
-          <a href="catalog-item.html" title="Перейти на страницу товара">
+          <a class="catalog-inner-header" href="catalog-item.html" title="Перейти на страницу товара">
             <h4>Непотопляемая селфи-палка</h4>
-            <p class="catalog-inner-image">
-              <img src="img/nepotopljaemaja-selfi-palka_catalog.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
-            </p>
           </a>
-          <p class="catalog-inner-price">2&nbsp;500&nbsp;руб.</p>
-          <button class="btn-card button" type="button"><span>В корзину</span></button>
-          <button class="btn-compare" type="button">Добавить к сравнению</button>
-        </li>
-        <li>
-          <a href="catalog-item.html" title="Перейти на страницу товара">
-            <h4>Селфи-палка &laquo;Следуй за&nbsp;мной&raquo;</h4>
+
+          <div class="catalog-inner-image-wrapper" tabindex="0">
             <p class="catalog-inner-image">
+              <a class="catalog-inner-header" href="catalog-item.html" title="Перейти на страницу товара">
+              <img src="img/nepotopljaemaja-selfi-palka_catalog.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
+              </a>
+            </p>
+
+            <div class="catalog-inner-wrapper-button">
+              <button class="btn-card button" type="button"><span>В корзину</span></button>
+              <button class="btn-compare" type="button">Добавить к сравнению</button>
+            </div>
+          </div>
+
+          <p class="catalog-inner-price">2&nbsp;500&nbsp;руб.</p>
+        </li>
+
+        <li>
+          <a class="catalog-inner-header" href="catalog-item.html" title="Перейти на страницу товара">
+            <h4>Селфи-палка &laquo;Следуй за&nbsp;мной&raquo;</h4>
+          </a>
+
+          <div class="catalog-inner-image-wrapper" tabindex="0">
+            <p class="catalog-inner-image">
+              <a class="catalog-inner-header" href="catalog-item.html" title="Перейти на страницу товара">
               <img src="img/selfi-palka-Sleduj-za-mnoj_catalog.jpg" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
               <span class="catalog-item-label">New</span>
+              </a>
             </p>
-          </a>
+
+            <div class="catalog-inner-wrapper-button">
+              <button class="btn-card button" type="button"><span>В корзину</span></button>
+              <button class="btn-compare" type="button">Добавить к сравнению</button>
+            </div>
+          </div>
+
           <p class="catalog-inner-price">4&nbsp;900&nbsp;руб.</p>
-          <button class="btn-card button" type="button"><span>В корзину</span></button>
-          <button class="btn-compare" type="button">Добавить к сравнению</button>
         </li>
       </ul>
 
@@ -230,16 +277,16 @@
 
         <ul class="footer-user-navigation">
           <li class="login-link hidden" hidden>
-            <a href="login.html">Войти</a>
+            <a href="login.html"><span>Войти</span></a>
           </li>
           <li class="logout-link">
-            <a href="logout.html">Выйти</a>
+            <a href="logout.html"><span>Выйти</span></a>
           </li>
           <li class="compare-link">
-            <a href="compare.html">Сравнить</a>
+            <a href="compare.html"><span>Сравнить</span></a>
           </li>
           <li class="card-link">
-            <a href="card.html">Корзина</a>
+            <a href="card.html"><span>Корзина</span></a>
           </li>
         </ul>
       </div>

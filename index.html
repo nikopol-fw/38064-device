@@ -21,12 +21,24 @@
             <li>
               <a class="catalog-link" href="catalog.html">Каталог товаров</a>
               <ul class="main-navigation-catalog">
-                <li><a href="inner.html">Виртуальная реальность</a></li>
-                <li><a href="inner.html">Моноподы для селфи</a></li>
-                <li><a href="inner.html">Экшн-камеры</a></li>
-                <li><a href="inner.html">Фитнесc-браслеты</a></li>
-                <li><a href="inner.html">Умные часы</a></li>
-                <li><a href="inner.html">Квадрокоптеры</a></li>
+                <li>
+                  <a href="inner.html">Виртуальная реальность</a>
+                  <a href="inner.html">Моноподы для селфи</a>
+                  <a href="inner.html">Экшн-камеры</a>
+                </li>
+
+                <li>
+                  <a href="inner.html">Фитнесc-браслеты</a>
+                  <a href="inner.html">Умные часы</a>
+                </li>
+
+                <li>
+                  <a href="inner.html">Квадрокоптеры</a>
+                </li>
+
+                <li></li>
+
+                <li></li>
               </ul>
             </li>
             <li><a href="delivery.html">Доставка</a></li>
@@ -68,9 +80,10 @@
       <section class="slider">
         <h2 class="visually-hidden">Слайдер предложений</h2>
 
-        <input class="visually-hidden" type="radio" name="slider-control" value="slider-01" id="slider-control-01">
-        <input class="visually-hidden" type="radio" name="slider-control" value="slider-02" id="slider-control-02">
-        <input class="visually-hidden" type="radio" name="slider-control" value="slider-03" id="slider-control-03">
+        <input class="slider-control-item visually-hidden" type="radio" name="slider-control" value="slider-01" id="slider-control-01" checked>
+        <input class="slider-control-item visually-hidden" type="radio" name="slider-control" value="slider-02" id="slider-control-02">
+        <input class="slider-control-item visually-hidden" type="radio" name="slider-control" value="slider-03" id="slider-control-03">
+
         <div class="slider-control">
           <label for="slider-control-01"><span class="visually-hidden">Слайд №1</span></label>
           <label for="slider-control-02"><span class="visually-hidden">Слайд №2</span></label>
@@ -173,7 +186,7 @@
           </li>
           <li>
             <a href="inner.html" title="Перейти в каталог моноподов для селфи">
-              <h3>Моноподы для селфи</h3>
+              <h3>Моноподы<br>для селфи</h3>
               <div class="products-list-image image-monopode"></div>
             </a>
           </li>
@@ -225,7 +238,7 @@
             <li id="services-list-guarantee" style="display:none;">
               <h3>Гарантия</h3>
               <div class="services-list-image image-guarantee"></div>
-              <p>Если из-за возгорания купленного у&nbsp;нас товара у&nbsp;вас сгорит дом&nbsp;&mdash; не&nbsp;переживайте, мы&nbsp;выдадим вам новый. Товар, не&nbsp;дом, конечно&nbsp;же.</p>
+              <p>Если из-за возгорания купленного у&nbsp;нас товара у&nbsp;вас сгорит дом&nbsp;&mdash; не&nbsp;переживайте, мы&nbsp;выдадим вам новый.<br>Товар, не&nbsp;дом, конечно&nbsp;же.</p>
             </li>
             <li id="services-list-credit" style="display:none;">
               <h3>Кредит</h3>
@@ -290,20 +303,22 @@
     <div class="container">
       <div class="main-bottom-wrapper">
         <section class="main-about-us">
-          <h2>О&nbsp;нас</h2>
+          <h2 class="section-title">О&nbsp;нас</h2>
 
-          <p>Огромный выбор гаджетов не&nbsp;оставит равнодушным гика, который есть в&nbsp;каждом из&nbsp;нас.</p>
-          <p>Мы&nbsp;можем доставить ваш товар в&nbsp;самые отдаленные точки России! DEVICE работает со&nbsp;многими транспортными компаниями:</p>
-          <ul>
-            <li><strong>Деловые Линии</strong></li>
-            <li><strong>Автотрейдинг</strong></li>
-            <li><strong>ЖелДорЭкспедиция</strong></li>
-          </ul>
+          <p>Огромный выбор гаджетов не&nbsp;оставит равнодушным гика,<br>который есть в&nbsp;каждом из&nbsp;нас.</p>
+          <div class="about-us-column">
+            <p>Мы&nbsp;можем доставить ваш товар в&nbsp;самые отдаленные точки<br>России! DEVICE работает со&nbsp;многими транспортными компаниями:</p>
+            <ul class="custon-list-1">
+              <li><strong>Деловые Линии</strong></li>
+              <li><strong>Автотрейдинг</strong></li>
+              <li><strong>ЖелДорЭкспедиция</strong></li>
+            </ul>
+          </div>
           <p><a class="button" href="about-us.html"><span>Подробнее о&nbsp;нас</span></a></p>
         </section>
 
         <section class="main-contacts">
-          <h2>Контакты</h2>
+          <h2 class="section-title">Контакты</h2>
 
           <p>Вы&nbsp;можете забрать товар сами, заехав в&nbsp;наш офис. Заодно, вы&nbsp;сможете проверить работоспособность покупки. Всякое бывает.</p>
           <p class="main-contacts-map">
@@ -314,16 +329,18 @@
       </div>
     </div>
 
-    <section class="modal message-modal">
+    <section class="modal message-modal" style="display: none;">
       <h2 class="visually-hidden">Напишите нам</h2>
 
       <form action="https://echo.htmlacademy.ru/?" method="post">
-        <p class="message-modal-name">
-          <label>Ваше имя:<br><input type="text" placeholder="Представьтесь, пожалуйста" name="message-modal-name" maxlength="255" required></label>
-        </p>
-        <p class="message-modal-email">
-          <label>Ваш e-mail:<br><input type="email" placeholder="Для отправки ответа" name="message-modal-email" maxlength="255" required></label>
-        </p>
+        <div class="modal-contacts-wrapper">
+          <p class="message-modal-name">
+            <label>Ваше имя:<br><input type="text" placeholder="Представьтесь, пожалуйста" name="message-modal-name" maxlength="255" required></label>
+          </p>
+          <p class="message-modal-email">
+            <label>Ваш e-mail:<br><input type="email" placeholder="Для отправки ответа" name="message-modal-email" maxlength="255" required></label>
+          </p>
+        </div>
         <p class="message-modal-text">
           <label>Текст письма:<br><textarea rows="6" placeholder="В свободной форме" name="message-modal-text" maxlength="25000" required></textarea></label>
         </p>
@@ -335,7 +352,7 @@
       <button class="modal-close" type="button"><span class="visually-hidden">Закрыть окно</span></button>
     </section>
 
-    <section class="modal map-modal">
+    <section class="modal map-modal" style="display: none;">
       <h2 class="visually-hidden">Мы&nbsp;на&nbsp;карте</h2>
 
       <iframe src="img/map-modal.jpg" width="960" height="559"></iframe>

@@ -23,10 +23,20 @@ link_write_us.addEventListener("click", function (evt) {
   evt.preventDefault();
   modal_write_us.classList.add("modal-open");
 
-  if (storage) {
-    name_write_us.value = storage_name;
-    email_write_us.value = storage_email;
+  if (storage_text) {
     text_write_us.value = storage_text;
+  } else {
+    text_write_us.focus();
+  }
+
+  if (storage_email) {
+    email_write_us.value = storage_email;
+  } else {
+    email_write_us.focus();
+  }
+
+  if (storage_name) {
+    name_write_us.value = storage_name;
   } else {
     name_write_us.focus();
   }

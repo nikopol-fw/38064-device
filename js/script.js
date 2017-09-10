@@ -1,16 +1,35 @@
 var link_write_us = document.querySelector(".write-us-link");
 var modal_write_us = document.querySelector(".message-modal");
 var close_button_write_us = modal_write_us.querySelector(".modal-close");
-var login_write_us = modal_write_us.querySelector("[name=message-modal-name]");
 
 var link_map = document.querySelector(".link-map");
 var modal_map = document.querySelector(".map-modal");
 var close_button_map = modal_map.querySelector(".modal-close");
 
+var services_link_delivery = document.querySelector("#services-link-delivery > a");
+var services_link_guarantee = document.querySelector("#services-link-guarantee > a");
+var services_link_credit = document.querySelector("#services-link-credit > a");
+
+var form = modal_write_us.querySelector("form");
+var name_write_us = modal_write_us.querySelector("[name=message-modal-name]");
+var email_write_us = modal_write_us.querySelector("[message-modal-email]");
+var text_write_us = modal_write_us.querySelector("[message-modal-text]");
+
+var storage_name = localStorage.getItem("name_write_us");
+var storage_email = localStorage.getItem("email_write_us");
+var storage_text = localStorage.getItem("text_write_us");
+
 link_write_us.addEventListener("click", function (evt) {
   evt.preventDefault();
   modal_write_us.classList.add("modal-open");
-  login_write_us.focus();
+
+  if (storage) {
+    name_write_us.value = storage_name;
+    email_write_us.value = storage_email;
+    text_write_us.value = storage_text;
+  } else {
+    name_write_us.focus();
+  }
 });
 
 close_button_write_us.addEventListener("click", function (evt) {
@@ -29,10 +48,6 @@ close_button_map.addEventListener("click", function (evt) {
   modal_map.classList.remove("modal-open");
 });
 
-
-var services_link_delivery = document.querySelector("#services-link-delivery > a");
-var services_link_guarantee = document.querySelector("#services-link-guarantee > a");
-var services_link_credit = document.querySelector("#services-link-credit > a");
 
 services_link_delivery.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -68,4 +83,11 @@ services_link_credit.addEventListener("click", function (evt) {
   document.querySelector("#services-link-delivery").classList.remove("services-list-anchor-current");
   document.querySelector("#services-list-guarantee").classList.remove("services-list-current");
   document.querySelector("#services-list-delivery").classList.remove("services-list-current");
+});
+
+
+form.addEventListener("submit", function (evt) {
+  localStorage.setItem("name_write_us", name_write_us.value);
+  localStorage.setItem("email_write_us", email_write_us.value);
+  localStorage.setItem("text_write_us", text_write_us.value);
 });

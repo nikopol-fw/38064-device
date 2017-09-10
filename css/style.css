@@ -484,6 +484,12 @@ main {
 
 .slider-item {
   position: relative;
+
+  display: none;
+}
+
+.slider-item.slider-item-current {
+  display: block;
 }
 
 .slider-item-wrapper {
@@ -503,7 +509,6 @@ main {
 .slider-item-title {
   position: relative;
 
-  max-width: 500px;
   margin-bottom: 16px;
 }
 
@@ -612,6 +617,18 @@ main {
 
 .slider-item td:nth-child(2) {
   font: 300 36px 'Gilroy', 'Arial', sans-serif;
+}
+
+#slider-control-01:checked ~ #slide-01 {
+  display: block;
+}
+
+#slider-control-02:checked ~ #slide-02 {
+  display: block;
+}
+
+#slider-control-03:checked ~ #slide-03 {
+  display: block;
 }
 
 
@@ -845,7 +862,12 @@ main {
 .services-list li {
   position: relative;
 
+  display: none;
   margin-top: 66px;
+}
+
+.services-list .services-list-current {
+  display: block;
 }
 
 .services-list-anchor li:not(:last-child) {
@@ -2103,6 +2125,25 @@ main {
 }
 
 
+@keyframes modal {
+  0% {
+    transform: translate(-50%, -2000px);
+  }
+
+  70% {
+    transform: translate(-50%, calc(-50% + 30px));
+  }
+
+  90% {
+    transform: translate(-50%, calc(-50% - 10px));
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+
 /* Elements -------------------------------------------- */
 .button {
   position: relative;
@@ -2180,12 +2221,21 @@ main {
   top: 50%;
   left: 50%;
   z-index: 2;
+
+  display: none;
   margin: 0 auto;
-  /*display: none;*/
+
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+
   background-color: #ffffff;
+}
+
+.modal-open {
+  display: block;
+
+  animation: modal 0.6s;
 }
 
 .modal .modal-close {

@@ -90,7 +90,7 @@
           <label for="slider-control-03"><span class="visually-hidden">Слайд №3</span></label>
         </div>
 
-        <article class="slider-item">
+        <article class="slider-item" id="slide-01">
           <h2 class="visually-hidden">Карбоновая селфи-палка</h2>
           <span class="slider-item-number">01</span>
           <div class="slider-item-wrapper">
@@ -121,7 +121,7 @@
           </div>
         </article>
 
-        <article class="slider-item" style="display:none;">
+        <article class="slider-item" id="slide-02">
           <h2 class="visually-hidden">Мотивирующий фитнес-браслет</h2>
           <span class="slider-item-number">02</span>
           <div class="slider-item-wrapper">
@@ -144,7 +144,7 @@
           </div>
         </article>
 
-        <article class="slider-item" style="display:none;">
+        <article class="slider-item" id="slide-03">
           <h2 class="visually-hidden">Квадрокоптер с&nbsp;лазером</h2>
           <span class="slider-item-number">03</span>
           <div class="slider-item-wrapper">
@@ -224,9 +224,9 @@
       <div class="container">
         <div class="services-wrapper">
           <ul class="services-list-anchor">
-            <li class="services-list-anchor-current"><a href="#services-list-delivery"><span>Доставка</span></a></li>
-            <li><a href="#services-list-guarantee"><span>Гарантия</span></a></li>
-            <li><a href="#services-list-credit"><span>Кредит</span></a></li>
+            <li class="services-list-anchor-current" id="services-link-delivery"><a href="#services-list-delivery"><span>Доставка</span></a></li>
+            <li id="services-link-guarantee"><a href="#services-list-guarantee"><span>Гарантия</span></a></li>
+            <li id="services-link-credit"><a href="#services-list-credit"><span>Кредит</span></a></li>
           </ul>
 
           <ul class="services-list">
@@ -235,12 +235,12 @@
               <div class="services-list-image image-delivery"></div>
               <p>Мы&nbsp;с&nbsp;удовольствием доставим ваш товар прямо к&nbsp;вашему подъезду совершенно бесплатно! Ведь мы&nbsp;неплохо заработаем, поднимая его на&nbsp;ваш этаж.</p>
             </li>
-            <li id="services-list-guarantee" style="display:none;">
+            <li id="services-list-guarantee">
               <h3>Гарантия</h3>
               <div class="services-list-image image-guarantee"></div>
               <p>Если из-за возгорания купленного у&nbsp;нас товара у&nbsp;вас сгорит дом&nbsp;&mdash; не&nbsp;переживайте, мы&nbsp;выдадим вам новый.<br>Товар, не&nbsp;дом, конечно&nbsp;же.</p>
             </li>
-            <li id="services-list-credit" style="display:none;">
+            <li id="services-list-credit">
               <h3>Кредит</h3>
               <div class="services-list-image image-credit"></div>
               <p>Залезть в&nbsp;долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
@@ -322,16 +322,16 @@
 
           <p>Вы&nbsp;можете забрать товар сами, заехав в&nbsp;наш офис. Заодно, вы&nbsp;сможете проверить работоспособность покупки. Всякое бывает.</p>
           <p class="main-contacts-map">
-            <a href="img/map-main.jpg" title="Развернуть карту во всплывающем окне">
+            <a class="link-map" href="img/map-main.jpg" title="Развернуть карту во всплывающем окне">
               <img src="img/map-main.jpg" alt="Карта нашего месторасположения" width="560" height="222">
             </a>
           </p>
-          <p><a class="button" href="send-message.html"><span>Напишите нам</span></a></p>
+          <p><a class="button write-us-link" href="send-message.html"><span>Напишите нам</span></a></p>
         </section>
       </div>
     </div>
 
-    <section class="modal message-modal" style="display: none;">
+    <section class="modal message-modal">
       <h2 class="visually-hidden">Напишите нам</h2>
 
       <form action="https://echo.htmlacademy.ru/?" method="post">
@@ -354,10 +354,10 @@
       <button class="modal-close" type="button"><span class="visually-hidden">Закрыть окно</span></button>
     </section>
 
-    <section class="modal map-modal" style="display: none;">
+    <section class="modal map-modal">
       <h2 class="visually-hidden">Мы&nbsp;на&nbsp;карте</h2>
 
-      <iframe src="img/map-modal.jpg" width="960" height="559"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1198539666025!2d37.52756879111318!3d55.686903972652715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1505046452622" width="800" height="600" allowfullscreen></iframe>
 
       <button class="modal-close" type="button"><span class="visually-hidden">Закрыть окно</span></button>
     </section>
@@ -415,5 +415,7 @@
       </div>
     </div>
   </footer>
+
+  <script type="text/javascript" src="js/script.min.js"></script>
 </body>
 </html>

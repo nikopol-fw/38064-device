@@ -11,9 +11,9 @@ var services_link_guarantee = document.querySelector("#services-link-guarantee >
 var services_link_credit = document.querySelector("#services-link-credit > a");
 
 var form = modal_write_us.querySelector("form");
-var name_write_us = modal_write_us.querySelector("[name=message-modal-name]");
-var email_write_us = modal_write_us.querySelector("[message-modal-email]");
-var text_write_us = modal_write_us.querySelector("[message-modal-text]");
+var name_write_us = form.querySelector("[name=message-modal-name]");
+var email_write_us = form.querySelector("[name=message-modal-email]");
+var text_write_us = form.querySelector("[name=message-modal-text]");
 
 var storage_name = localStorage.getItem("name_write_us");
 var storage_email = localStorage.getItem("email_write_us");

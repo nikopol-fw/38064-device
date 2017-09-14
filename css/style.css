@@ -1571,7 +1571,11 @@ main {
 
 .scale .bar {
   position: absolute;
+  left: 0;
+
+  width: 60%;
   height: 2px;
+
   background-color: #91c92f;
 }
 
@@ -1608,6 +1612,22 @@ main {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+.label-min {
+  left: 0;
+}
+
+.label-max {
+  left: 60%;
+}
+
+.toggle-min {
+  left: 0;
+}
+
+.toggle-max {
+  left: 60%;
 }
 
 
